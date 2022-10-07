@@ -68,22 +68,11 @@ RUN mkdir "/app"                                    && \
     # mv /root/.jupyter/custom.css /root/.jupyter/custom/custom.css
 
 
+WORKDIR   /app
 VOLUME [ "/app" ]
 
 EXPOSE 8888
 
-ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/bin/bash"]
 
-CMD [                                           \
-  "jupyter", "notebook",                        \
-    "--ip=0.0.0.0",                             \
-    "--port=8888",                              \
-    "--notebook-dir=/app",                      \
-    # "--config=/app/jupyter_notebook_config.py", \
-    "--NotebookApp.token=''",                   \
-    "--NotebookApp.password=''",                \
-    "--no-browser",                             \
-    "--autoreload",                             \
-    "--allow-root",                             \
-    "&"                                         \
-]
+CMD ["nohup", "jupyter", "lab", "--ip=0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''", "--notebook-dir=/app", "--no-browser", "--allow-root"]
