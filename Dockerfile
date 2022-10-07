@@ -4,6 +4,10 @@ ARG RELEASE_TAG="22.04"
 
 FROM ${BASE_IMAGE}:${RELEASE_TAG}
 
+# set pip's cache directory using this environment variable, and use
+# ARG instead of ENV to ensure its only set when the image is built
+ARG PIP_CACHE_DIR=/tmp/pip-cache
+
 ENV DEBIAN_FRONTEND="noninteractive"   \
     PYTHON_VERSION="3.9"               \
     CONDA_DIR="/opt/conda"             \
@@ -68,14 +72,14 @@ VOLUME [ "/app" ]
 
 EXPOSE 8888
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]
 
-ENTRYPOINT [                                    \
+CMD [                                           \
   "jupyter", "notebook",                        \
     "--ip=0.0.0.0",                             \
     "--port=8888",                              \
     "--notebook-dir=/app",                      \
-    "--config=/app/jupyter_notebook_config.py", \
+    # "--config=/app/jupyter_notebook_config.py", \
     "--NotebookApp.token=''",                   \
     "--NotebookApp.password=''",                \
     "--no-browser",                             \
