@@ -1,0 +1,30 @@
+---
+
+# docker compose up --detach --build notebook
+
+version: "3"
+
+services:
+  notebook:
+    container_name: jupyter-notebook
+
+    build:
+     context: .
+     dockerfile: Dockerfile
+
+    ports:
+      - "8888:8888"
+
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ./data:/app
+
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: 1
+            capabilities: [gpu]

@@ -1,0 +1,319 @@
+/* This file contains any manual css for this page that needs to override the global styles.
+    This is only required when different pages style the same element differently. This is just
+    a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+
+#jupyter-main-app {
+    position: relative;
+}
+
+.header-bar {
+    display: none;
+}
+
+#header-container img {
+    display: none;
+}
+
+#notebook_name {
+    margin-left: 0px !important;
+}
+
+#header-container {
+    padding-left: 0px !important
+}
+
+html,
+body {
+    overflow: hidden;
+    font-family: OpenSans;
+}
+
+#header {
+    background-color: #212121 !important;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.navbar-collapse {
+    background-color: #212121 !important;
+    color: #fff;
+    border: none !important
+}
+
+#menus {
+    border: none !important;
+    color: white !important;
+}
+
+#menus .dropdown-toggle {
+    color: white !important;
+}
+
+#filelink {
+    color: white !important;
+    text-align: centerimportant;
+    padding-left: 7px;
+    text-decoration: none !important;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: #191919 !important;
+    color: #eee !important;
+    text-align: left !important;
+}
+
+.dropdown-menu,
+.dropdown-menu a,
+.dropdown-submenu a {
+    background-color: #191919;
+    color: #fff !important;
+}
+
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-submenu>a:after {
+    background-color: #212121;
+    color: #fff !important;
+}
+
+.btn-default {
+    color: #fff !important;
+    background-color: #212121 !important;
+    border: none !important;
+}
+
+.dropdown {
+    text-align: left !important;
+}
+
+.form-control.select-xs {
+    background-color: #191919 !important;
+    color: #eee !important;
+    border: none;
+    outline: none;
+}
+
+#modal_indicator {
+    display: none;
+}
+
+#kernel_indicator {
+    color: #fff;
+}
+
+#notification_trusted,
+#notification_notebook {
+    background-color: #212121;
+    color: #eee !important;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+#logout {
+    background-color: #191919;
+    color: #eee;
+}
+
+#maintoolbar-container {
+    padding-top: 0px !important;
+}
+
+.notebook_app {
+    background-color: #222222;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#notebook-container {
+    background-color: #212121;
+}
+
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+    border: none !important;
+}
+
+.cm-keyword {
+    color: orange !important;
+}
+
+.input_area {
+    background-color: #212121 !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.cm-def {
+    color: #5bc0de !important;
+}
+
+.cm-variable {
+    color: yellow !important;
+}
+
+.output_subarea.output_text.output_result pre,
+.output_subarea.output_text.output_stream.output_stdout pre {
+    color: white !important;
+}
+
+.CodeMirror-line {
+    color: white !important;
+}
+
+.cm-operator {
+    color: white !important;
+}
+
+.cm-number {
+    color: lightblue !important;
+}
+
+.inner_cell {
+    border: 1px thin #eee;
+    border-radius: 50px !important;
+}
+
+.CodeMirror-lines {
+    border-radius: 20px;
+}
+
+.prompt.input_prompt {
+    color: #5cb85c !important;
+}
+
+.prompt.output_prompt {
+    color: lightblue;
+}
+
+.cm-string {
+    color: #6872ac !important;
+}
+
+.cm-builtin {
+    color: #f0ad4e !important;
+}
+
+.run_this_cell {
+    color: lightblue !important;
+}
+
+.input_area {
+    border-radius: 20px;
+}
+
+.output_png {
+    background-color: white;
+}
+
+.CodeMirror-cursor {
+    border-left: 1.4px solid white;
+}
+
+.box-flex1.output_subarea.raw_input_container {
+    color: white;
+}
+
+input.raw_input {
+    color: black !important;
+}
+
+div.output_area pre {
+    color: white
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white !important;
+    font-weight: bolder !important;
+}
+
+.CodeMirror-gutter.CodeMirror-linenumber,
+.CodeMirror-gutters {
+    background-color: #212121 !important;
+}
+
+
+span.filename:hover {
+    color: #191919 !important;
+    height: auto !important;
+}
+
+#site {
+    background-color: #191919 !important;
+    color: white !important;
+}
+
+#tabs li.active a {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+#tabs li {
+    background-color: #191919 !important;
+    color: white !important;
+    border-top: 1px thin #eee;
+}
+
+#notebook_list_header {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+#running .panel-group .panel {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+#accordion.panel-heading {
+    background-color: #212121 !important;
+}
+
+#running .panel-group .panel .panel-heading {
+    background-color: #212121;
+    color: white
+}
+
+.item_name {
+    color: white !important;
+    cursor: pointer !important;
+}
+
+.list_item:hover {
+    background-color: #212121 !important;
+}
+
+.item_icon.icon-fixed-width {
+    color: white !important;
+}
+
+#texteditor-backdrop {
+    background-color: #191919 !important;
+    border-top: 1px solid #eee;
+}
+
+.CodeMirror {
+    background-color: #212121 !important;
+}
+
+#texteditor-backdrop #texteditor-container .CodeMirror-gutter,
+#texteditor-backdrop #texteditor-container .CodeMirror-gutters {
+    background-color: #212121 !important;
+}
+
+.celltoolbar {
+    background-color: #212121 !important;
+    border: none !important;
+}
